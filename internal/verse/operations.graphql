@@ -1,0 +1,124 @@
+query ActivityPage($after: Cursor, $filter: ActivityPageFilter) {
+  activityPage(first: 50, after: $after, filter: $filter) {
+    nodes {
+      id
+      amount
+      transactionHash
+      toUserId {
+        username
+      }
+      fromUserId {
+        username
+      }
+      fromEthereumAddress {
+        address
+        ensName
+      }
+      toEthereumAddress {
+        address
+        ensName
+      }
+      fromBlockchainAddress
+      entryType
+      timestamp
+      toBlockchainAddress
+      artwork {
+        id
+        title
+      }
+      asset {
+        id
+        assetType
+        asset {
+          ... on Bookmark {
+            hash
+          }
+          ... on Edition {
+            tokenId
+            editionNumber
+            title
+            staticAsset {
+              ... on VideoAsset {
+                id
+                baseUrl
+                s3Key
+                previewS3Key
+                previewImageUrl
+                author
+                caption
+                previewAspectRatio
+                width
+                height
+                mimeType
+                fileSize
+                internalTitle
+              }
+              ... on ImageAsset {
+                id
+                baseUrl
+                s3Key
+                author
+                caption
+                aspectRatio
+                width
+                height
+                mimeType
+                fileSize
+                internalTitle
+                isGif
+              }
+              ... on SVGAsset {
+                id
+                baseUrl
+                s3Key
+                previewS3Key
+                previewImageUrl
+                author
+                caption
+                previewAspectRatio
+                mimeType
+                fileSize
+                internalTitle
+              }
+              ... on AudioAsset {
+                id
+                baseUrl
+                duration
+                mimeType
+                fileSize
+                internalTitle
+              }
+              ... on IFrameAsset {
+                id
+                iframeUrl
+                baseUrl
+                previewS3Key
+                previewImageUrl
+                aspectRatio
+                caption
+                internalTitle
+              }
+            }
+            artwork {
+              collection {
+                name
+                slug
+                persons {
+                  slug
+                }
+              }
+              artist {
+                name
+                slug
+              }
+            }
+          }
+        }
+      }
+    }
+    pageInfo {
+      endCursor
+      hasNextPage
+    }
+  }
+}
