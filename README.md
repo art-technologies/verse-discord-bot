@@ -105,7 +105,7 @@ All events (sale, listing, offer) for artist [qubibi](https://verse.works/qubibi
 
 ### Example 3
 
-Sale event for [Quasi Dragon Studies](https://verse.works/series/quasi-dragon-studies-by-harvey-rayner) collection.
+Sale events for [Quasi Dragon Studies](https://verse.works/series/quasi-dragon-studies-by-harvey-rayner) collection.
 
 ```json
 {

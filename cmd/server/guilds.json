@@ -2,7 +2,19 @@
   {
     "channel_id": "1217172859479392366",
     "filters": {
-      "artists": ["qubibi"]
+      "collections": [],
+      "collaborators": ["tender", "verse-solos"],
+      "artists": [],
+      "events": [
+        "PM_SALE",
+        "SM_LISTED",
+        "SM_SALE",
+        "SM_OFFER",
+        "SM_GLOBAL_OFFER",
+        "OS_SALE",
+        "OS_OFFER",
+        "OS_LISTED"
+      ]
     }
   }
 ]
