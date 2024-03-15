@@ -62,7 +62,7 @@ Allows you to receive events only for one or more specific collections.
 
 Allows to specify what kind of sale, offer or listing events should be sent.
 
-| `PM_SALE`         | Verse primary market sale events        |
+| Event             | Description                             |
 | ----------------- | --------------------------------------- |
 | `PM_SALE`         | Verse primary market sale events        |
 | `SM_LISTED`       | Verse secondary market listing events   |
