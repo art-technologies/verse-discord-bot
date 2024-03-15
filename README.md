@@ -11,7 +11,7 @@ Note: OpenSea events will work only for projects that exist on Verse.
 In order to start using Verse discord bot you should
 
 1. [Invite Verse Discord Bot](https://discord.com/oauth2/authorize?client_id=1180153976331706408&permissions=2048&scope=bot) to your server and create a channel for the events.
-2. Identify what events you want to show in your Discord server and create configuration. Examples of configuration here.
+2. Identify what events you want to show in your Discord server and create [configuration](#Configuration).
 3. Make Pull Request to [guilds.json](./cmd/server/guilds.json) with your configuration requirements based. If you are can't make Pull Request please reach out to us at support@verse.works.
 4. Once we approve Pull Request your Discord channel will start receiving events.
 
