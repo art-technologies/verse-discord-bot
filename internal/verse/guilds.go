@@ -3,7 +3,6 @@ package verse
 type Guilds []GuildDetails
 
 type GuildDetails struct {
-	ServerID  string  `json:"server_id"`
 	ChannelID string  `json:"channel_id"`
 	Filters   *Filter `json:"filters"`
 }

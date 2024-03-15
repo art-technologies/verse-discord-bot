@@ -126,8 +126,9 @@ func (v *ActivityPageActivityPageActivityEntryConnectionNodesActivityEntry) GetA
 
 // ActivityPageActivityPageActivityEntryConnectionNodesActivityEntryArtwork includes the requested fields of the GraphQL type Artwork.
 type ActivityPageActivityPageActivityEntryConnectionNodesActivityEntryArtwork struct {
-	Id    string  `json:"id"`
-	Title *string `json:"title"`
+	Id     string                                                                                `json:"id"`
+	Title  *string                                                                               `json:"title"`
+	Artist *ActivityPageActivityPageActivityEntryConnectionNodesActivityEntryArtworkArtistPerson `json:"artist"`
 }
 
 // GetId returns ActivityPageActivityPageActivityEntryConnectionNodesActivityEntryArtwork.Id, and is useful for accessing the field via an interface.
@@ -138,6 +139,21 @@ func (v *ActivityPageActivityPageActivityEntryConnectionNodesActivityEntryArtwor
 // GetTitle returns ActivityPageActivityPageActivityEntryConnectionNodesActivityEntryArtwork.Title, and is useful for accessing the field via an interface.
 func (v *ActivityPageActivityPageActivityEntryConnectionNodesActivityEntryArtwork) GetTitle() *string {
 	return v.Title
+}
+
+// GetArtist returns ActivityPageActivityPageActivityEntryConnectionNodesActivityEntryArtwork.Artist, and is useful for accessing the field via an interface.
+func (v *ActivityPageActivityPageActivityEntryConnectionNodesActivityEntryArtwork) GetArtist() *ActivityPageActivityPageActivityEntryConnectionNodesActivityEntryArtworkArtistPerson {
+	return v.Artist
+}
+
+// ActivityPageActivityPageActivityEntryConnectionNodesActivityEntryArtworkArtistPerson includes the requested fields of the GraphQL type Person.
+type ActivityPageActivityPageActivityEntryConnectionNodesActivityEntryArtworkArtistPerson struct {
+	Slug string `json:"slug"`
+}
+
+// GetSlug returns ActivityPageActivityPageActivityEntryConnectionNodesActivityEntryArtworkArtistPerson.Slug, and is useful for accessing the field via an interface.
+func (v *ActivityPageActivityPageActivityEntryConnectionNodesActivityEntryArtworkArtistPerson) GetSlug() string {
+	return v.Slug
 }
 
 // ActivityPageActivityPageActivityEntryConnectionNodesActivityEntryAsset includes the requested fields of the GraphQL type Asset.
@@ -1114,6 +1130,9 @@ query ActivityPage ($after: Cursor, $filter: ActivityPageFilter) {
 			artwork {
 				id
 				title
+				artist {
+					slug
+				}
 			}
 			asset {
 				id

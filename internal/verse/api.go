@@ -10,7 +10,7 @@ import (
 	"github.com/Khan/genqlient/graphql"
 )
 
-const maxPages = 1
+const maxPages = 3
 
 type Config struct {
 	API string
@@ -54,10 +54,9 @@ func (s *Service) GetRecentActivityPage(cursor *string) (*ActivityPageResponse, 
 func (s *Service) GetActivity() ([]ActivityPageActivityPageActivityEntryConnectionNodesActivityEntry, error) {
 	var cursor *string = nil
 
-	pagesCount := 0
+	pagesCount := 1
 
 	for {
-		println("Getting page", pagesCount)
 		activityPage, err := s.GetRecentActivityPage(cursor)
 		if err != nil {
 			return nil, err

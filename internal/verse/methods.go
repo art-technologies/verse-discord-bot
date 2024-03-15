@@ -91,11 +91,7 @@ func GetArtistName(a *ActivityPageActivityPageActivityEntryConnectionNodesActivi
 }
 
 func GetArtistSlug(a *ActivityPageActivityPageActivityEntryConnectionNodesActivityEntry) string {
-	switch asset := a.Asset.Asset.(type) {
-	case *ActivityPageActivityPageActivityEntryConnectionNodesActivityEntryAssetAssetEdition:
-		return *&asset.Artwork.Artist.Slug
-	}
-	return ""
+	return a.Artwork.Artist.Slug
 }
 
 func ContainsCollaborators(a *ActivityPageActivityPageActivityEntryConnectionNodesActivityEntry, desiredCollaborators *[]string) bool {

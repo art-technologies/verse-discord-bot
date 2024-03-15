@@ -53,24 +53,26 @@ func main() {
 	// New activity comes in
 	for _, activity := range activities {
 		for _, guild := range guilds {
-			// satisfy events filter
-			if guild.Filters != nil && !verse.ContainsEvents(&activity, guild.Filters.Events) {
-				continue
-			}
+			if guild.Filters != nil {
+				// satisfy events filter
+				if !verse.ContainsEvents(&activity, guild.Filters.Events) {
+					continue
+				}
 
-			// satisfy artists filter
-			if guild.Filters != nil && !verse.ContainsArtist(&activity, guild.Filters.Artists) {
-				continue
-			}
+				// satisfy artists filter
+				if !verse.ContainsArtist(&activity, guild.Filters.Artists) {
+					continue
+				}
 
-			// satisfy collaborators filter
-			if guild.Filters != nil && !verse.ContainsCollaborators(&activity, guild.Filters.Collaborators) {
-				continue
-			}
+				// satisfy collaborators filter
+				if !verse.ContainsCollaborators(&activity, guild.Filters.Collaborators) {
+					continue
+				}
 
-			// satisfy collections filter
-			if guild.Filters != nil && !verse.ContainsCollections(&activity, guild.Filters.Collections) {
-				continue
+				// satisfy collections filter
+				if !verse.ContainsCollections(&activity, guild.Filters.Collections) {
+					continue
+				}
 			}
 
 			processActivity(discordService, guild.ChannelID, activity)

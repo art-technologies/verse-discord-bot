@@ -25,6 +25,9 @@ query ActivityPage($after: Cursor, $filter: ActivityPageFilter) {
       artwork {
         id
         title
+        artist {
+          slug
+        }
       }
       asset {
         id
