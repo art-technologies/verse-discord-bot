@@ -13,8 +13,6 @@
   - [Example 2](#example-2)
   - [Example 3](#example-3)
 
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
-
 ## Introduction
 
 Verse Discord bot allows to stream real time marketplace events to your Discord server. It can be configured to send events for sales, listings and offers including both Verse and OpenSea.
