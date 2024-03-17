@@ -1,5 +1,20 @@
 # Verse Discord Bot
 
+- [Introduction](#introduction)
+- [Add it to your Discord server](#add-it-to-your-discord-server)
+- [Configuration](#configuration)
+  - [Filters](#filters)
+    - [Artists filter](#artists-filter)
+    - [Collaborators filter](#collaborators-filter)
+    - [Collcetions filter](#collcetions-filter)
+    - [Events filter](#events-filter)
+  - [Configuration examples](#configuration-examples)
+  - [Example 1](#example-1)
+  - [Example 2](#example-2)
+  - [Example 3](#example-3)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 ## Introduction
 
 Verse Discord bot allows to stream real time marketplace events to your Discord server. It can be configured to send events for sales, listings and offers including both Verse and OpenSea.
